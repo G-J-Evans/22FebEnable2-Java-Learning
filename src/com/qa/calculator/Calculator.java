@@ -16,12 +16,19 @@ public class Calculator {
 	}
 	
 	public int mul(int a, int b) {
-		int c = a * b;
-		return c;
+		return a * b;
+		
 	}
 	
 	public float div(int a, int b) {
-		float c = (float)a / (float)b;
-		return c;
+		if (a <= b) {
+			float c = (float)a / (float)b;
+			return c;
+			
+		} else {
+			System.out.println("The numerator is larger than the denomiator");
+			float c = (float)a / (float)b;
+			return c;
+		}
 	}
 }
