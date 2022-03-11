@@ -12,8 +12,11 @@ public class Runner {
 		// Syntax below
 		List<String> listOfStrings = new ArrayList<>();
 		
+		// Adds an element to the end of the array list
+		listOfStrings.add("Pre Hello");
 		listOfStrings.add("Hello");
 		listOfStrings.add("There");
+		System.out.println(listOfStrings);
 		
 		
 		// How we get values of the array list
