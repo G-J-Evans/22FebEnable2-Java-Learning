@@ -1,4 +1,4 @@
-package com.qa.oop.inheritance.vehicle;
+package com.qa.oop.inheritance.garagetask.vehicles;
 
 public class Car extends Vehicle{
 	
@@ -18,8 +18,8 @@ public class Car extends Vehicle{
 	}
 
 	@Override
-	public int bill(int time) {
-		return (getValue()/10)+(time*20);
+	public int bill(int timeSpentFixing) {
+		return (getValue()/10)+(timeSpentFixing*20);
 	}
 
 	public int getNumberOfMirrors() {

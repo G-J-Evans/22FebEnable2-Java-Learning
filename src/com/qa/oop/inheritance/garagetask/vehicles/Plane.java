@@ -1,4 +1,4 @@
-package com.qa.oop.inheritance.vehicle;
+package com.qa.oop.inheritance.garagetask.vehicles;
 
 public class Plane extends Vehicle{
 	
@@ -18,8 +18,8 @@ public class Plane extends Vehicle{
 	}
 
 	@Override
-	int bill(int time) {
-		return (getValue()/4)+(time*20);
+	public int bill(int timeSpentFixing) {
+		return (getValue()/4)+(timeSpentFixing*20);
 	}
 
 	public int getNumberOfEngines() {

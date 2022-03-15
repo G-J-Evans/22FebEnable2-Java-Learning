@@ -1,7 +1,9 @@
-package com.qa.oop.inheritance.vehicle;
+package com.qa.oop.inheritance.garagetask.garage;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.qa.oop.inheritance.garagetask.vehicles.Vehicle;
 
 public class Garage {
 
@@ -34,7 +36,7 @@ public class Garage {
 	}
 
 	public void garageBillAll() {
-		System.out.println("Bill for garage");
+		System.out.println("--- Bill for garage ---");
 		System.out.println();
 		for (int i = 0; i < garageInventory.size(); i++) {
 			System.out.println("ID: " + garageInventory.get(i).getId());
@@ -44,20 +46,24 @@ public class Garage {
 		}
 	}
 
-	public int fixCost(Vehicle vehicle, int time) {
-		return vehicle.bill(time);
+	public int fixBill(Vehicle vehicle, int timeSpentFixing) {
+		return vehicle.bill(timeSpentFixing);
+	}
+	
+	public void emptyGarage() {
+		garageInventory.clear();
 	}
 
-	public void removeVehicleType(String type) {
+	public void removeVehicleType(String typeOfVehicle) {
 		
 		List<Vehicle> leavingVehicles = new ArrayList<>();
 		
 		for (Vehicle vehicle : garageInventory) {
-			if (vehicle.getClass().getSimpleName().equals(type)) {
+			if (vehicle.getClass().getSimpleName().equalsIgnoreCase(typeOfVehicle)) {
 				leavingVehicles.add(vehicle);
 			}
 		}
 		garageInventory.removeAll(leavingVehicles);
 	}
-
+	
 }

@@ -1,4 +1,4 @@
-package com.qa.oop.inheritance.vehicle;
+package com.qa.oop.inheritance.garagetask.vehicles;
 
 public class Motorbike extends Vehicle{
 	
@@ -27,8 +27,8 @@ public class Motorbike extends Vehicle{
 	}
 
 	@Override
-	int bill(int time) {
-		return (getValue()/8)+(time*20);
+	public int bill(int timeSpentFixing) {
+		return (getValue()/8)+(timeSpentFixing*20);
 	}
 
 }
