@@ -1,8 +1,8 @@
 package com.qa.oop.encapsulation;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Person {
+	
+	public static int count; 
 	
 	private String firstName;
 	private String lastName;
@@ -13,6 +13,7 @@ public class Person {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.jobTitle = jobTitle;
+		count++;
 	}
 
 	public String getFirstName() {
@@ -42,12 +43,6 @@ public class Person {
 	@Override
 	public String toString() {
 		return "Person [firstName: " + firstName + ", lastName: " + lastName + ", job title: " + jobTitle + "]";
-	}
-	
-	private void listOfPeople() {
-		
-	List<Person> listOfPeople = new ArrayList<>();
-	
 	}
 	
 }
